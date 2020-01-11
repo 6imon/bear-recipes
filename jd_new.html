@@ -1,0 +1,31 @@
+<html>
+  <head>
+   <link href="style.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="topnav">
+      <a class="nactive" href="index.html">Recipes</a>
+      <a class="nactive" href="jd_new.html">Schedule</a>
+    </div>
+
+    <h1>Aktuálny rozpis</h1>
+    
+    <div class="centrum">
+    <iframe width="884" height="660" name="frame" align="middle" id="frame" frameborder="1" scrolling="auto" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQulsQnqNfU_RMMaPFmZIKQmlxNAMgKYmL2zaSi4HykxwR1XdrP8l71T7zviOGGO5gAcErgTfL02Lfw/pubhtml?gid=1219114837&amp;range=A3:C14&amp;single=true&amp;widget=false&amp;chrome=false&amp;headers=false"></iframe>
+  </div>
+
+  </body>
+
+  <script type="text/javascript">
+    const date1 = new Date();
+    const date2 = new Date('07/10/2019');
+    const diffTime = Math.abs(date2.getTime() - date1.getTime());
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) - 1; 
+    console.log(diffDays);
+    const minDay = 2 + diffDays;
+    const maxDay = 23 + diffDays;
+    const adresa = `https://docs.google.com/spreadsheets/d/e/2PACX-1vQulsQnqNfU_RMMaPFmZIKQmlxNAMgKYmL2zaSi4HykxwR1XdrP8l71T7zviOGGO5gAcErgTfL02Lfw/pubhtml?gid=1219114837\&range=A${minDay}:C${maxDay}\&single=true\&widget=false\&chrome=false\&headers=false`;
+    console.log(adresa);
+    document.getElementById("frame").src = adresa
+  </script>
+</html>
