@@ -2,29 +2,52 @@
 <html>
 <head>
 	<title>Plant Report</title>
+	<style>
+body {
+  background-image: url('bgr.png');
+  background-repeat: repeat-y;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 25px 50px 75px 100px;
+}
+div {
+	background-color: white;
+	border-radius: 25px;
+	padding: 10px;
+	margin-top: 20px ;
+}
+.right {
+	float: right;
+}
+.left {
+	float: left;
+}
+</style>
 </head>
-<body topmargin="0" leftmargin="10%" rightmargin="0">
+<body topmargin="1%" leftmargin="10%" rightmargin="10%" width="auto">
 	<div class="topnav">
       <a class="nactive" href="index.html">Schedule</a>
       <a class="nactive" href="recipe.html">Recipes</a>
       <a class="nactive" href="https://pancakes.cloud/list/" target="_blank">Pancakes web</a>
       <a class="nactive" href="plant.html">Plant Report</a>
     </div>
-	<h1>Plant Report</h1>
-	<div>
+    <div>
+    	<h1>Plant Report</h1>
+	</div>
+	<div style="cursor: pointer;" onclick="window.location='plant_graphs/brectan.html';">
 		<h2>Brečtan</h2>
-		<a href="plant_graphs/brectan.html" target="_blank"><img src="plant_graphs/brectan.svg"></a>
-		<a><img src="plant_graphs/brectan_2.png"></a>
+		<img width="49%"  src="plant_graphs/brectan.svg">
+		<img width="49%" src="plant_graphs/brectan.svg">
 	</div>
-	<div>
+	
+	<div style="cursor: pointer;" onclick="window.location='plant_graphs/paprad.html';">
 		<h2>Papraď</h2>
-		<a href="plant_graphs/paprad.html" target="_blank"><img src="plant_graphs/paprad.svg"></a>
-		<a><img src="plant_graphs/paprad_2.png"></a>
+		<img width="49%" src="plant_graphs/paprad.svg">
+		<img width="49%" src="plant_graphs/paprad.svg">
 	</div>
-	<div>
+	<div style="cursor: pointer;" onclick="window.location='plant_graphs/kuchyna_kava.html';">
 		<h2>Káva v kuchyni</h2>
-		<a href="plant_graphs/kuchyna_kava.html" target="_blank"><img src="plant_graphs/kuchyna_kava.svg"></a>
-		<a><img src="plant_graphs/kuchyna_kava_2.png"></a>
+		<img width="49%" src="plant_graphs/kuchyna_kava.svg">
+		<img width="49%" src="plant_graphs/kuchyna_kava.svg">
 	</div>
 </body>
 </html>
